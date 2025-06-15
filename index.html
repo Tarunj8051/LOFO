@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UVCE Lost & Found Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>UVCE Lost & Found</h1>
+    <form id="lostFoundForm">
+      <label for="usn">USN:</label>
+      <input type="text" id="usn" name="usn" required />
+
+      <label for="branch">Branch:</label>
+      <select id="branch" name="branch" required>
+        <option value="">Select Branch</option>
+        <option value="CS">CS</option>
+        <option value="EC">EC</option>
+        <option value="EE">EE</option>
+        <option value="AIML">AIML</option>
+      </select>
+
+      <label for="description">Item Description:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required />
+      <img id="preview" src="#" alt="Image Preview" style="display:none;" />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="response"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
